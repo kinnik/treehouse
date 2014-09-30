@@ -3,3 +3,7 @@
 import UIKit
 
 var str = "Hello, playground"
+
+var optionalString: String? = "toto"
+
+
