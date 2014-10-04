@@ -2,7 +2,7 @@
 //  FactBook.swift
 //  FunFacts
 //
-//  Created by Harry James Potter on 04/10/2014.
+//  Created on 04/10/2014.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
 //
 
