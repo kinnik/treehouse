@@ -13,6 +13,7 @@
 		4A1AC5E819D749EA00375E1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1AC5E719D749EA00375E1A /* Images.xcassets */; };
 		4A1AC5EB19D749EA00375E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1AC5E919D749EA00375E1A /* LaunchScreen.xib */; };
 		4A1AC5F719D749EA00375E1A /* FunFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1AC5F619D749EA00375E1A /* FunFactsTests.swift */; };
+		4A203F6019E0591800859B9A /* FactBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A203F5F19E0591700859B9A /* FactBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		4A1AC5F519D749EA00375E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A1AC5F619D749EA00375E1A /* FunFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsTests.swift; sourceTree = "<group>"; };
 		4A1AC60019D74BB500375E1A /* Scratchpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratchpad.playground; sourceTree = "<group>"; };
+		4A203F5F19E0591700859B9A /* FactBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4A1AC5E019D749EA00375E1A /* AppDelegate.swift */,
 				4A1AC5E219D749EA00375E1A /* ViewController.swift */,
 				4A1AC5E419D749EA00375E1A /* Main.storyboard */,
+				4A203F5F19E0591700859B9A /* FactBook.swift */,
 				4A1AC5E719D749EA00375E1A /* Images.xcassets */,
 				4A1AC5E919D749EA00375E1A /* LaunchScreen.xib */,
 				4A1AC5DE19D749EA00375E1A /* Supporting Files */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A203F6019E0591800859B9A /* FactBook.swift in Sources */,
 				4A1AC5E319D749EA00375E1A /* ViewController.swift in Sources */,
 				4A1AC5E119D749EA00375E1A /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +419,7 @@
 				4A1AC5FC19D749EA00375E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A1AC5FD19D749EA00375E1A /* Build configuration list for PBXNativeTarget "FunFactsTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				4A1AC5FF19D749EA00375E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FunFacts
 //
-//  Created by Harry James Potter on 27/09/2014.
+//  Created on 27/09/2014.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
 //
 
@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var funFactLabel: UILabel!
+    let factBook = FactBook()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        funFactLabel.text = factBook.randomFact()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showFunFact() {
-        funFactLabel.text = "Another fun fact"
+        funFactLabel.text = factBook.randomFact()
     }
 
 }
