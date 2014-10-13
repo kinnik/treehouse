@@ -10,17 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let apiKey = "xxx"
+    private let apiKey = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let location = "37.8267,-122.423"
-        let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
-        let foreCaseURL = NSURL(string: location, relativeToURL: baseURL)
+        let coordinates = "37.8267,-122.423"
+        let     baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
+        let forecastURL = NSURL(string: coordinates, relativeToURL: baseURL)
         
-        let weatherData = NSData.dataWithContentsOfURL(foreCaseURL, options: nil, error: nil)
-        println(weatherData)
+//        let weatherData = NSData.dataWithContentsOfURL(forecastURL, options: nil, error: nil)
+//        println(weatherData)
+        
+        let sharedSession = NSURLSession.sharedSession()
+        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(forecastURL,
+        completionHandler:
+            { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+
+                if (error == nil)
+                {
+                    let dataObject  = NSData(contentsOfURL: location)
+                    let weatherDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSDictionary
+                    println(weatherDict)
+                }
+                
+            })
+        
+        downloadTask.resume()
     }
 
     override func didReceiveMemoryWarning() {
