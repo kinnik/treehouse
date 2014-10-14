@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Stormy
 //
-//  Created by Harry James Potter on 05/10/2014.
+//  Created on 05/10/2014.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
 //
 
@@ -31,7 +31,10 @@ class ViewController: UIViewController {
                 {
                     let dataObject  = NSData(contentsOfURL: location)
                     let weatherDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSDictionary
-                    println(weatherDict)
+                    
+                    let currentWeather = CurrentWeather(weatherDict: weatherDict)
+                    
+                    println(currentWeather.timeNow!)
                 }
                 
             })
